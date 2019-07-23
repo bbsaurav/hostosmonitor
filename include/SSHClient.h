@@ -1,4 +1,5 @@
 #include<libssh/libssh.h>
+#include<string>
 
 using namespace std;
 
@@ -19,3 +20,5 @@ class SSHClient
     int createSSHSession();
     int runCommand(string command, unsigned char *buffer, int *bufLen);
 };
+
+int startServer(SSHClient *client);
